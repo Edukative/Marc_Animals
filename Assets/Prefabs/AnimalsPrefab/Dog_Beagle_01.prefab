@@ -3788,6 +3788,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4660819098386078584}
   - component: {fileID: 4660819098379129484}
+  - component: {fileID: 4596497786343463956}
+  - component: {fileID: -9165568213285545242}
+  - component: {fileID: 1795433100998173212}
   m_Layer: 0
   m_Name: Dog_Beagle_01
   m_TagString: Untagged
@@ -3803,7 +3806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4660819098386420270}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -8.54, y: 0, z: 1.65}
+  m_LocalPosition: {x: -15, y: 0, z: 13}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 4660819098386064842}
@@ -3865,6 +3868,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &4596497786343463956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660819098386420270}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10336177, y: 0.22791843, z: 0.27493438}
+  m_Center: {x: 0.0015292168, y: 0.10041001, z: 0.03249405}
+--- !u!114 &-9165568213285545242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660819098386420270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d72fdf8ab486a1d468a2217606b5bb36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &1795433100998173212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4660819098386420270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad8f9d431ad5af409af715fee470a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4660819098386420806
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private float horizontalInput;
-    private float xRange = 10.0f; // Range limit that the player can move
+    private float xRange = 20.0f; // Range limit that the player can move
     public GameObject projectile;
 
     // Start is called before the first frame update
