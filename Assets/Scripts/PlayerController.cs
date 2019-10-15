@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private float xRange = 20.0f; // Range limit that the player can move
     public GameObject projectile;
 
+    public int health; //Player's Health
+
     // Start is called before the first frame update
     void Start()
     {
