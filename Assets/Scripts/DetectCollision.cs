@@ -20,15 +20,17 @@ public class DetectCollision : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        if(other.tag != "Player")
+        if(other.tag == "Player")
         {
-            Destroy(other.gameObject);
+            PlayerController player = GetComponent<PlayerController>();
+            player.health--;
+            Debug.Log(other.gameObject);
+            Destroy(gameObject);
         }
         else
         {
-            player.health--;
-            Debug.Log(player.health);
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
     }
 }
