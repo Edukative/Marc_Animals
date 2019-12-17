@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private float xRange = 20.0f; // Range limit that the player can move
     public GameObject projectile;
+    private Vector3 projectileOffset;
 
     public int health; //Player's Health
 
@@ -24,7 +25,9 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space)) // if you press "space"
         {
             // Shoot a food prefab
-            Instantiate(projectile, transform.position, projectile.transform.rotation);
+            projectileOffset = transform.position; // get the current position
+            projectileOffset.z = 1;
+            Instantiate(projectile, projectileOffset, projectile.transform.rotation);
         }
         
         // Move left/right
@@ -34,7 +37,7 @@ public class PlayerController : MonoBehaviour
         // Limit the movement of the player
         if (transform.position.x < -xRange) // too far to the left
         {
-            transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
         else if (transform.position.x > xRange) //too far to the right
         {

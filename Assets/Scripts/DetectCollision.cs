@@ -20,14 +20,14 @@ public class DetectCollision : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
-        if(other.tag == "Player")
+        if(other.tag == "Player" && this.tag == "Animal")
         {
-            PlayerController player = GetComponent<PlayerController>();
+            PlayerController player = other.GetComponent<PlayerController>();
             player.health--;
             Debug.Log(other.gameObject);
             Destroy(gameObject);
         }
-        else
+        else if (this.tag != "Projectile")
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
