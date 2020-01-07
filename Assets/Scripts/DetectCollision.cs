@@ -23,7 +23,7 @@ public class DetectCollision : MonoBehaviour
         if(other.tag == "Player" && this.tag == "Animal")
         {
             PlayerController player = other.GetComponent<PlayerController>();
-            player.health--;
+            player.LoseHP();
             Debug.Log(other.gameObject);
             Destroy(gameObject);
         }
